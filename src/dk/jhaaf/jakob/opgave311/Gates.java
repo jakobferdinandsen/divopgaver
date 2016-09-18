@@ -18,35 +18,18 @@ public class Gates {
     }
 
     public boolean or(boolean n, boolean x) {
-        if (n || x) {
-            return true;
-        } else {
-            return false;
-        }
+        return n || x;
     }
 
     public boolean and(boolean n, boolean x) {
-        if (n && x) {
-            return true;
-        } else {
-            return false;
-        }
+        return n && x;
     }
 
     public boolean nand(boolean n, boolean x) {
-        return not(and(n, x));
+        return !(n && x);
     }
 
     public boolean exor(boolean n, boolean x) { //Hedder XOR, ikke EXOR.
-        if (and(!n, !x)) {
-            return false;
-        } else if (and(!n, x)) {
-            return true;
-        } else if (and(n, !x)) {
-            return true;
-        } else {
-            return false;
-        }
-
+        return (n && !x) || (!n && x);
     }
 }
