@@ -11,14 +11,14 @@ public class SomeRecursion {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter an integer");
         int input = scanner.nextInt();
-        System.out.println("Result: "+ recursion.recursiveFunction(input));
+        System.out.println("Result: " + recursion.recurFunc(input));
     }
 
-    public int recursiveFunction(int input){
-        if (input <= 2){
+    public int recurFunc(int input) {
+        if (input <= 2) {
             return input;
         }
-        return 2*recursiveFunction(input-1)+recursiveFunction(input-2)-recursiveFunction(input-3);
+        return 2 * recurFunc(input - 1) + recurFunc(input - 2) - recurFunc(input - 3);
     }
 
 }
